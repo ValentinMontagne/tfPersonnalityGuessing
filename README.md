@@ -1,9 +1,9 @@
-#Quizz Messenger:
+# Quizz Messenger:
 
 The project is about two step, one is about quizz the user and get his or her personality.
 For this, we will use tensorflow to handle the results of the quizz.
 
-##It will be 5 personality:
+## It will be 5 personality:
 
 -   Sportive
 -   Geek
@@ -11,7 +11,7 @@ For this, we will use tensorflow to handle the results of the quizz.
 -   NightLife
 -   Crazy
 
-##And this is the 6 questions for the quizz:
+## And this is the 6 questions for the quizz:
 
     1.  When it rain outdoor and you are stuck to home, what did you do ?
 
@@ -53,7 +53,7 @@ For this, we will use tensorflow to handle the results of the quizz.
         3)  Buy some alcohol, finding a good plan for tonight and going together.
         4)  You will do some Karate or Judo to speak with your punchs.
 
-##Results
+## Results
 
 -   Sportive => [2, 0, 3, 1, 4]
 -   Geek => [0, 1, 0, 2, 0]
@@ -61,32 +61,33 @@ For this, we will use tensorflow to handle the results of the quizz.
 -   NightLife => [4, 4, 1, 0, 3]
 -   Crazy => [3, 3, 4, 3, 2]
 
-##Sportive
+## Sportive
 
-Good job ! You are a person who really like to be healthy and take care of your body !
+Good job ! You are a person who really like to be healthy and take care of your body !  
 You are someone who do a lot of sports and will have a great future in your club !
 
-##Geek
+## Geek
 
-Your life is about games, mangas, comics and so much things !
+Your life is about games, mangas, comics and so much things !  
 You have a powerful passion and you will never failed with a computer in your hands !
 
-##Artist
+## Artist
 
-Ow ! You are an artist, someone who is really sensible and can imagine everything, you have a talent to draw or art.
+Ow ! You are an artist, someone who is really sensible and can imagine everything, you have a talent to draw or art.  
 You will be the next Picasso or Akira Toriyama !
 
-##Nightlife
+## Nightlife
 
-You are the kind of person who live during the night, your heart is beating in the same rythm than the music clubs.
+You are the kind of person who live during the night, your heart is beating in the same rythm than the music clubs.  
 Take some soju and have fun !
 
-##Crazy
+## Crazy
 
 Your mom' said to you that you are "Really special".
 
-##Example Data with results:
+## Example Data with results:
 
+```
 [
     [2, 0, 3, 1, 4],
     [2, 4, 3, 1, 4],
@@ -122,3 +123,4 @@ Your mom' said to you that you are "Really special".
     [0, 0, 0, 0, 1],
     [0, 0, 0, 0, 1],
 ]
+```
