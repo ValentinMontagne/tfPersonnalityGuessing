@@ -22,8 +22,6 @@ x_data = [
     [3, 3, 3, 3, 2],
     [3, 3, 4, 3, 4],
 ]
-# [ 3, 3, 0, 0, 2 ]
-# [ 0, 0, 0, 0, 1 ]
 y_data = [
     [1, 0, 0, 0, 0],
     [1, 0, 0, 0, 0],
@@ -58,18 +56,5 @@ with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     for step in range(5000):
         sess.run(optimizer, feed_dict={X: x_data, Y: y_data})
-        if step % 400 == 0:
-            print('Step: ', step, '\nCost: ', sess.run(cost, feed_dict={ X: x_data, Y: y_data }))
-    a = sess.run(hypothesis, feed_dict={ X: [[2, 0, 3, 1, 4]]})
-    print('\nClassic test:')
-    printPersonality(sess.run(tf.argmax(a, 1)))
-    b = sess.run(hypothesis, feed_dict={ X: [[0, 1, 0, 2, 0]]})
-    print('Classic test:')
-    printPersonality(sess.run(tf.argmax(b, 1)))
-    c = sess.run(hypothesis, feed_dict={ X: [[1, 2, 2, 4, 1]]})
-    print('Classic test:')
-    printPersonality(sess.run(tf.argmax(c, 1)))
-    #custom
-    print('\nSpecial one')
     d = sess.run(hypothesis, feed_dict={ X: [[float(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5])]]})
     printPersonality(sess.run(tf.argmax(d, 1)))

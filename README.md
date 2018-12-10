@@ -124,3 +124,53 @@ Your mom' said to you that you are "Really special".
     [0, 0, 0, 0, 1],
 ]
 ```
+
+## Example of use:
+
+### Input:
+```
+python classification.py 0 2 0 4 1
+```
+### Output:
+```
+Step:  0 
+Cost:  8.011766
+Step:  400 
+Cost:  0.14376192
+Step:  800 
+Cost:  0.08511636
+Step:  1200 
+Cost:  0.060781192
+Step:  1600 
+Cost:  0.047310088
+Step:  2000 
+Cost:  0.03873803
+Step:  2400 
+Cost:  0.03280028
+Step:  2800 
+Cost:  0.028443348
+Step:  3200 
+Cost:  0.025109673
+Step:  3600 
+Cost:  0.022476602
+Step:  4000 
+Cost:  0.020344127
+Step:  4400 
+Cost:  0.018581884
+Step:  4800 
+Cost:  0.017101066
+
+Classic test:
+Sportive
+Classic test:
+Geek
+Classic test:
+Artist
+
+Special one
+Artist
+```
+
+## Bin
+
+The bin.py is just the same as classification but without logs and debuging information.
