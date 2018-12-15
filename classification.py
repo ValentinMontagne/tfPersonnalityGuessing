@@ -73,3 +73,14 @@ with tf.Session() as sess:
     print('\nSpecial one')
     d = sess.run(hypothesis, feed_dict={ X: [[float(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5])]]})
     printPersonality(sess.run(tf.argmax(d, 1)))
+    print ([v for v in tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES)])
+    saver = tf.train.Saver([v for v in tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES)])
+    # Use a saver_def to get the "magic" strings to restore
+    saver_def = saver.as_saver_def()
+    print(saver_def.filename_tensor_name)
+    print(saver_def.restore_op_name)
+
+    # write out 3 files 
+    saver.save(sess, './trained_model.sd')
+    tf.train.write_graph(sess.graph_def, '.', 'trained_model.proto', as_text=False)
+    tf.train.write_graph(sess.graph_def, '.', 'trained_model.txt', as_text=True)
